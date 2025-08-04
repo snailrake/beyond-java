@@ -55,7 +55,7 @@ public class Lesson2 {
         System.out.println(spellLowerCase);
 
         Random random = new Random();
-        int randomindex = random.nextInt(spellLowerCase.length());//подменил значение рандома до длины строки ибо там может выйти за рамки)
+        int randomindex = random.nextInt(spellLowerCase.length());
 
         String substring = spellLowerCase.substring(randomindex);
         System.out.println(substring);
