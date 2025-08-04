@@ -5,8 +5,11 @@ import java.util.Random;
 public class Lesson1 {
     public static void main(String[] args) {
 
-        String dumbledore = "Dumbledore", mcgonagall =
-                "I still don't know who the fuck it is.", snape = "Snape", lipun = "Lipun", hugrid = "Hugrid";
+        String dumbledore = "Dumbledore",
+                mcgonagall = "I still don't know who the fuck it is.",
+                snape = "Snape",
+                lipun = "Lipun",
+                hugrid = "Hugrid";
 
         String teacher = "school teachers: ";
 
