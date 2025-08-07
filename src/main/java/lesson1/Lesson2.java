@@ -6,46 +6,37 @@ public class Lesson2 {
     public static void main(String[] args) {
 
         Random random = new Random();
-        StringBuilder line = new StringBuilder();
+        StringBuilder lineWithNum = new StringBuilder();
 
         for (int i = 0; i < 5; i++) {
             int randomnum = random.nextInt(10);
-            line.append(randomnum);
+            lineWithNum.append(randomnum);
             if (i < 4) {
-                line.append("-");
+                lineWithNum.append("-");
             }
         }
 
-        System.out.println("the resulting string: " + line);
+        System.out.println("the resulting string: " + lineWithNum);
 
-        for (int i = 0; i < line.length(); i++) {
-            if (line.charAt(i) == '1') {
-                line.setCharAt(i, 'i');
-            }
-            if (line.charAt(i) == '-') {
-                line.deleteCharAt(i);
-            }
-            if (line.charAt(i) == '0') {
-                line.setCharAt(i, 'o');
-            }
-            if (line.charAt(i) == '6') {
-                line.setCharAt(i, 'b');
-            }
-        }
+        String resultLine = lineWithNum.toString()
+                .replace("-","")
+                .replace("1","i")
+                .replace("0","o")
+                .replace("6","b");
 
-        System.out.println("the line with the changes: " + line);
+        System.out.println("the line with the changes: " + resultLine);
 
-        int a = line.indexOf("23");
+        int a = lineWithNum.indexOf("23");
         if (a != -1){
             System.out.println("this line has a substring - 23");
         } else System.out.println("this line does not have a substring - 23");
 
-        int a1 = line.indexOf("ob");
+        int a1 = lineWithNum.indexOf("ob");
         if (a1 != -1){
             System.out.println("substring index: "+a1);
-        } else System.out.println("there is no substring \"ob\"");
-
-        castSpell();
+        } else {
+            System.out.println("there is no substring \"ob\"");
+        }
     }
 
     public static String castSpell()
@@ -60,9 +51,9 @@ public class Lesson2 {
         String substring = spellLowerCase.substring(randomindex);
         System.out.println(substring);
 
-        StringBuilder Spell = new StringBuilder(substring);
-        Spell.reverse();
-        String reverseSpell = Spell.toString();
+        StringBuilder spell1 = new StringBuilder(substring);
+        spell1.reverse();
+        String reverseSpell = spell1.toString();
         System.out.println(reverseSpell);
 
         if (reverseSpell.length() >= 2) {
