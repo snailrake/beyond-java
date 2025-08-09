@@ -26,7 +26,12 @@ public class Lesson2 {
 
         System.out.println("the line with the changes: " + resultLine);
 
-        System.out.println(resultLine.contains("23"));
+        if (!resultLine.contains("23"))
+        {
+            System.out.println("this line does not have a substring - 23");
+        } else {
+            System.out.println("this line has a substring - 23");
+        }
 
         int indexOfob = resultLine.indexOf("ob");
         if (indexOfob != -1){
