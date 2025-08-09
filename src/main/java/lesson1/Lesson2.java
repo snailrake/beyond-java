@@ -26,20 +26,19 @@ public class Lesson2 {
 
         System.out.println("the line with the changes: " + resultLine);
 
-        int a = lineWithNum.indexOf("23");
-        if (a != -1){
-            System.out.println("this line has a substring - 23");
-        } else System.out.println("this line does not have a substring - 23");
+        System.out.println(resultLine.contains("23"));
 
-        int a1 = lineWithNum.indexOf("ob");
-        if (a1 != -1){
-            System.out.println("substring index: "+a1);
+        int indexOfob = resultLine.indexOf("ob");
+        if (indexOfob != -1){
+            System.out.println("substring index: "+ indexOfob);
         } else {
             System.out.println("there is no substring \"ob\"");
         }
+
+        castSpell();
     }
 
-    public static String castSpell()
+    public static void castSpell()
     {
         String spell = "ARDENTIS VERUM LUMINOS ET FULGUR SYLVESTRA ELIXIA";
         String spellLowerCase = spell.toLowerCase();
@@ -62,6 +61,5 @@ public class Lesson2 {
             reverseSpell = one + String.valueOf(zero) + reverseSpell.substring(2);
         }
         System.out.println(reverseSpell);
-        return reverseSpell;
     }
 }
