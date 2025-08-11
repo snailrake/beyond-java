@@ -1,4 +1,4 @@
-package lesson1;
+package SortingFolder;
 import java.util.Scanner;
 
 public class SortingHat {
