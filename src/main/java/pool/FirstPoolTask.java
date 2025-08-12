@@ -3,8 +3,6 @@ package pool;
 public class FirstPoolTask {
 
     public void first() {
-        // Пометь в комментарии для каждого: примитив/ссылочный: int, Integer, char, Character, String, long, Long.
-
         String s1 = "Dragon";
         String s2 = "Dragon";
         String s3 = new String("Dragon");
