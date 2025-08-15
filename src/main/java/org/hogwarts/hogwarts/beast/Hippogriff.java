@@ -3,6 +3,7 @@ import java.util.Random;
 import org.hogwarts.hogwarts.school.Student;
 
 public class Hippogriff {
+
     String name;
     int age;
     String skinColor;
