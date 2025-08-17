@@ -14,5 +14,14 @@ public class Main {
         Hippogriff twoParamsHippo = new Hippogriff("Duglas", "red");
         Hippogriff oneParamsHippo = new Hippogriff("Wylsacom");
         noParamsHippo.setName("Nameless");
+
+        Student allParamStudent = new Student("Harry",
+                "Gryffindor",
+                19,
+                new String[]{"forbidden spells","swastika on the forehead"});
+
+        String theFlyingStudent = allParamsHippo.giveRide(allParamStudent);
+
+        System.out.println(theFlyingStudent);
     }
 }
