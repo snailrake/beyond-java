@@ -1,13 +1,15 @@
 package org.hogwarts.hogwarts.beast;
 import java.util.Random;
-import org.hogwarts.hogwarts.school.Student;
 
+import lombok.Getter;
+import org.hogwarts.hogwarts.school.Student;
+@Getter
 public class Hippogriff {
 
-    String name;
-    int age;
-    String skinColor;
-    String specialSkill;
+    public String name;
+    private int age;
+    private String skinColor;
+    private String specialSkill;
 
     public Hippogriff(String name, int age, String skinColor, String  specialSkill) {
         this.name = name;
@@ -27,22 +29,6 @@ public class Hippogriff {
 
     public Hippogriff() {
 
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public String getSkinColor() {
-        return skinColor;
-    }
-
-    public String getSpecialSkill() {
-        return specialSkill;
     }
 
     public void setName(String name) {

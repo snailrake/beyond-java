@@ -1,11 +1,15 @@
 package org.hogwarts.hogwarts.school;
 
+import lombok.Getter;
+
+@Getter
 public class Student {
 
-    String name;
-    String faculty;
-    int age;
-    String[] specialSkills;
+    private String name;
+    private String faculty;
+    private int age;
+    private String[] specialSkills;
+
 
     public Student(String name, String faculty, int age, String[] specialSkills) {
         if (specialSkills.length > 3) {
@@ -16,21 +20,5 @@ public class Student {
             this.age = age;
             this.specialSkills = specialSkills;
         }
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public String getFaculty() {
-        return faculty;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public String[] getSpecialSkills() {
-        return specialSkills;
     }
 }
