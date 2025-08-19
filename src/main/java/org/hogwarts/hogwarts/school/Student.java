@@ -1,11 +1,15 @@
 package org.hogwarts.hogwarts.school;
 
+import lombok.Getter;
+
+@Getter
 public class Student {
 
-    String name;
-    String faculty;
-    int age;
-    String[] specialSkills;
+    private String name;
+    private String faculty;
+    private int age;
+    private String[] specialSkills;
+
 
     public Student(String name, String faculty, int age, String[] specialSkills) {
         if (age >= 11) {
@@ -20,22 +24,6 @@ public class Student {
         } else {
             System.out.println("You can only enroll in Hogwarts from the age of 11 or more");
         }
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public String getFaculty() {
-        return faculty;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public String[] getSpecialSkills() {
-        return specialSkills;
     }
 
     public void castSpell (Spell spell){
