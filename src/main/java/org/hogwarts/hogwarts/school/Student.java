@@ -12,17 +12,20 @@ public class Student {
 
 
     public Student(String name, String faculty, int age, String[] specialSkills) {
-        if (age >= 11) {
-            if (specialSkills.length > 3) {
-                throw new IllegalArgumentException("Student can have maximum 3 special skills");
-            } else {
-                this.name = name;
-                this.faculty = faculty;
-                this.age = age;
-                this.specialSkills = specialSkills;
-            }
-        } else {
+        checkAgeAndSkills(age,specialSkills);
+
+        this.name = name;
+        this.faculty = faculty;
+        this.age = age;
+        this.specialSkills = specialSkills;
+    }
+
+    private void checkAgeAndSkills(int age, String[] skills) {
+        if (age < 11) {
             throw new IllegalArgumentException("You can only enroll in Hogwarts from the age of 11 or more");
+        }
+        if (skills.length > 3) {
+            throw new IllegalArgumentException("Student can have maximum 3 special skills");
         }
     }
 
