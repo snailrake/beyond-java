@@ -2,7 +2,7 @@ package org.hogwarts.hogwarts.Items;
 
 import org.hogwarts.hogwarts.school.Student;
 
-public class Car implements Invisible{
+public class Car implements Invisible {
 
     public Student driver;
     public int speed;
