@@ -1,9 +1,12 @@
 package org.hogwarts.hogwarts.school;
 
 import lombok.Getter;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 @Getter
-public class Student {
+public class Student implements Comparable<Student>{
 
     private String name;
     private String faculty;
@@ -35,5 +38,14 @@ public class Student {
             throw new SpellCastException(this.name + " still too young to use a spell " + spell.getTitle());
         }
         System.out.println(this.name + " use spell " + spell.getTitle());
+    }
+
+    public int compareTo(Student other) {
+        return Integer.compare(this.age, other.age);
+    }
+
+    public String toString() {
+        return "Student name = " + name + ", age = " + age + ", faculty = " + faculty + ", skills = " +
+                java.util.Arrays.toString(specialSkills);
     }
 }
